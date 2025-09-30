@@ -4,7 +4,7 @@
 // - para pruebas local: 'http://localhost:3000/api'
 // - para Vercel: 'https://tu-proyecto.vercel.app/api'
 
-const API_BASE = 'https://mi-proyecto.vercel.app/api'; // <- CAMBIA AQUI
+const API_BASE = "https://warzone-scores.vercel.app/api"; 
 
 export async function fetchScores(rango = '5h') {
   const url = `${API_BASE}/scores?rango=${encodeURIComponent(rango)}`;
@@ -17,3 +17,4 @@ export async function fetchScores(rango = '5h') {
   // asumimos payload.data es el array de filas (como devuelve el endpoint sugerido)
   return payload.data || [];
 }
+
