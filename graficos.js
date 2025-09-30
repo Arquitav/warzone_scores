@@ -36,7 +36,7 @@ async function fetchData(rango) {
     }
 
     try {
-        const data = await fetchScores("5h");
+        const data = await fetchScores(rango);
         return data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -161,4 +161,5 @@ document.getElementById('btn-30d').addEventListener('click', () => cargarGrafico
 // =================================================================
 document.addEventListener('DOMContentLoaded', () => {
     cargarGraficos('5h'); // Carga los datos de las últimas 5h al abrir la página
+
 });
