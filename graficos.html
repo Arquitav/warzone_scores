@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficas de Rendimiento</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Gráficas de Rendimiento</h1>
+        <a href="index.html">Volver al Inicio</a>
+        <br>
+        <br>
+        <div id="time-filters-container">
+        <button id="btn-5h">Últimas 5h</button>
+        <button id="btn-7d">Últimos 7d</button>
+        <button id="btn-30d">Últimos 30d</button>
+        </div>
+    </header>
+    <main>
+        <div id="filters-container">
+            <button data-stat="puntuacion">Puntuación</button>
+            <button data-stat="eliminaciones">Eliminaciones</button>
+            <button data-stat="bajas">Bajas</button>
+            <button data-stat="asistencias">Asistencias</button>
+            <button data-stat="muertes">Muertes</button>
+            <button data-stat="daño">Daño</button>
+        </div>
+        <div style="width: 80%; margin: auto;">
+            <canvas id="statsChart"></canvas>
+        </div>
+    </main>
+    
+    <script type="module" src="graficos.js"></script>
+</body>
+</html>
