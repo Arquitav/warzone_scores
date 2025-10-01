@@ -2,20 +2,15 @@
 import { createClient } from '@supabase/supabase-js';
 
 // --- Configuración de CORS dinámica ---
-const allowedOrigins = ['https://arquitav.github.io']; // Producción
+const allowedOrigins = ['https://arquitav.github.io', 'http://127.0.0.1:5500', 'http://localhost:5500'];
 
-if (process.env.NODE_ENV !== 'production') {
-  allowedOrigins.push('http://127.0.0.1:5500'); // Live Server
-  allowedOrigins.push('http://localhost:5500');   // Alternativa
-}
+
 
 export default async function handler(req, res) {
-  // Elegir el origen que se permite según el request
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   }
-
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
