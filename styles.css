@@ -12,14 +12,22 @@ header{
 h1{
     color: white;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    font-family: 'Courier New', Courier, monospace;}
+
+#player1-name, #player2-name, #player3-name, #player4-name{
+    font-family: "Michroma", sans-serif;
+    font-size: 18px;
+}
+
+h2{
+    height: 45px;
+    margin: 22px 0px 15px 0px;
+}
 
 .player-card{
-    background-color: rgb(168, 168, 168);
     width: 250px;
-    border-radius: 10px;
+    height: 540px;
     margin: 10px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     display: block;
     text-align: center;
 }
@@ -51,7 +59,10 @@ h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    color: #fafafa;
 }
+
+    
 
 main{
     padding: 0px;
@@ -116,3 +127,24 @@ a:link{
 #chart-container{
     width: 100%;
 }
+
+#player1 {
+    background-image: url(images/fondo2a.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
+#player2 {
+    background-image: url(images/fondo2b.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
+#player3 {
+    background-image: url(images/fondo2c.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
+#player4 {
+    background-image: url(images/fondo2d.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
