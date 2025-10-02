@@ -1,11 +1,11 @@
 body{
-    background-color: rgb(255, 255, 253);
+    background-color: rgb(1, 22, 30);
 }
 
 header{
-    background-color: rgb(245, 121, 121);
+    background-color: rgb(18, 69, 89);
     text-align: center;
-    height: 100px;
+    height: 115px;
 
 }
 
@@ -55,7 +55,9 @@ h1{
 }
 
 main{
-    margin: 15px;
+    border: rgb(217, 255, 0) 1px solid;
+    padding: 0px;
+    margin: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,4 +103,20 @@ main{
 
 .hidden {
   display: none;
+}
+
+a:visited{
+ color: #cccccc;
+}
+
+a:link{
+    color: #f5f5f5;
+}
+
+canvas{
+    border: 1px solid rgb(255, 0, 0);
+}
+
+#chart-container{
+    width: 100%;
 }

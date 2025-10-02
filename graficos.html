@@ -12,13 +12,13 @@
         <h1>Gráficas de Rendimiento</h1>
         <a href="index.html">Volver al Inicio</a>
         <br>
-        <br>
         <div id="time-filters-container">
         <button id="btn-5h">Últimas 5h</button>
         <button id="btn-7d">Últimos 7d</button>
         <button id="btn-30d">Últimos 30d</button>
         </div>
     </header>
+    <br>
     <main>
         <div id="filters-container">
             <button data-stat="puntuacion">Puntuación</button>
@@ -28,7 +28,8 @@
             <button data-stat="muertes">Muertes</button>
             <button data-stat="daño">Daño</button>
         </div>
-        <div style="width: 80%; margin: auto;">
+        <br>
+        <div id="chart-container">
             <canvas id="statsChart"></canvas>
         </div>
     </main>
