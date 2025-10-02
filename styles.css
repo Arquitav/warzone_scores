@@ -16,9 +16,8 @@ h1{
 
 .player-card{
     background-color: rgb(168, 168, 168);
-    width: 200px;
+    width: 250px;
     border-radius: 10px;
-    padding: 10px;
     margin: 10px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     display: block;
@@ -35,7 +34,7 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .player-card > div label {
@@ -55,7 +54,6 @@ h1{
 }
 
 main{
-    border: rgb(217, 255, 0) 1px solid;
     padding: 0px;
     margin: 0px;
     display: flex;
@@ -65,6 +63,7 @@ main{
 
 #filters-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -113,9 +112,6 @@ a:link{
     color: #f5f5f5;
 }
 
-canvas{
-    border: 1px solid rgb(255, 0, 0);
-}
 
 #chart-container{
     width: 100%;
