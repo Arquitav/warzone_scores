@@ -95,3 +95,21 @@ document.getElementById('btn-30d').addEventListener('click', () => cargarScores(
 document.addEventListener('DOMContentLoaded', () => {
   cargarScores('5h');
 });
+
+
+// 1. Obtener todos los botones
+const botones = document.querySelectorAll('.efecto_boton');
+
+// 2. Iterar sobre ellos y añadir un "escuchador" de clic
+botones.forEach(boton => {
+  boton.addEventListener('click', function() {
+    
+    // a) Primero, quitar la clase 'activo' de CUALQUIER botón que la tenga
+    botones.forEach(b => {
+      b.classList.remove('activo');
+    });
+    
+    // b) Luego, añadir la clase 'activo' SOLO al botón que se ha clicado
+    this.classList.add('activo');
+  });
+});

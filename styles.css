@@ -195,3 +195,11 @@ a:link{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;}
+
+.efecto_boton {
+    background-color: #d4d4d4;
+}
+
+.activo {
+    background-color: rgb(179, 201, 82);
+}

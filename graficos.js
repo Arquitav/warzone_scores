@@ -10,7 +10,7 @@ const PLAYER_COLORS = {
 };
 
 const ctx = document.getElementById('statsChart').getContext('2d');
-const statFilterButtons = document.querySelectorAll('#filters-container button'); // Renombrado para claridad
+const statFilterButtons = document.querySelectorAll('#filters-container-stats button'); // Renombrado para claridad
 
 let chart; 
 let processedData;
@@ -145,6 +145,7 @@ function updateChart(statKey) {
 statFilterButtons.forEach(button => {
     button.addEventListener('click', () => {
         const stat = button.getAttribute('data-stat');
+        if (!stat) return; // seguridad: si no hay data-stat no hacer nada
         updateChart(stat);
     });
 });
@@ -163,3 +164,4 @@ document.addEventListener('DOMContentLoaded', () => {
     cargarGraficos('5h'); // Carga los datos de las últimas 5h al abrir la página
 
 });
+
