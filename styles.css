@@ -1,12 +1,45 @@
 body{
-    background-color: rgb(1, 22, 30);
+    background-color: rgb(12, 15, 19);
 }
 
-header{
-    background-color: rgb(18, 69, 89);
-    text-align: center;
-    height: 115px;
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url(images/black-background-modern-dark-abstract-seamless-texture-vector.jpg);
+    background-size: 600px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.2; /* aquí controlas la transparencia de la imagen */
+    z-index: -1;
+}
 
+header {
+    position: relative;           /* Necesario para que ::before se ajuste al header */
+    background-color: #36531a;    /* 🎨 Color sólido detrás */
+    height: 120px;
+    display: flex;               /* Activa flexbox */
+    flex-direction: column;      /* Coloca el contenido en columna (h1, links, botones) */
+    justify-content: center;     /* Centra horizontalmente */
+    align-items: center;         /* Centra verticalmente */
+    text-align: center;
+}
+
+/* Imagen superpuesta con transparencia */
+header::before {
+    content: "";
+    position: absolute;           /* Lo hace flotar dentro del header */
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("images/istockphoto-1468296537-612x612.jpg") ;
+    background-size: 300px;
+    opacity: .7;                  /* 👈 controlas la transparencia de la imagen */
+    z-index: 0;                   /* queda detrás del texto */
+}
+
+/* Asegura que el texto quede por encima */
+header * {
+    position: relative;
+    z-index: 1;
 }
 
 h1{
@@ -73,13 +106,27 @@ main{
 }
 
 #filters-container{
+    width: 350px;
+    height: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 5px;
+    gap: 15px;
+    margin: 10px;
 }
+
+#filters-container-stats{
+    width: 550px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 10px;
+}
+
 
 .loader {
   position: fixed;
